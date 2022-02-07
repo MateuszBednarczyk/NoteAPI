@@ -7,10 +7,19 @@ import javax.persistence.*;
 public class Note {
 
   @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long noteId;
   private String noteTitle;
   private String noteContent;
+
+  public Note(long noteId, String noteTitle, String noteContent) {
+    this.noteId = noteId;
+    this.noteTitle = noteTitle;
+    this.noteContent = noteContent;
+  }
+
+  public Note() {
+  }
 
   public long getNoteId() {
     return noteId;
