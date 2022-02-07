@@ -12,8 +12,7 @@ public class Note {
   private String noteTitle;
   private String noteContent;
 
-  public Note(long noteId, String noteTitle, String noteContent) {
-    this.noteId = noteId;
+  public Note(String noteTitle, String noteContent) {
     this.noteTitle = noteTitle;
     this.noteContent = noteContent;
   }
